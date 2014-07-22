@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+     
+        <script> 
+            // wait for the DOM to be loaded 
+            $(document).ready(function() { 
+                $("#ss-form").submit(function(e) {
+                        var postData = $(this).serializeArray();
+                        var formURL = $(this).attr("action");
+                        $.ajax(
+                        {
+                            url : formURL,
+                            type: "POST",
+                            data : postData,
+                            success:function(data, textStatus, jqXHR) 
+                            {
+                                alert('tight.');
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) 
+                            {
+                                alert('not tight.');    
+                            }
+                        });
+                        e.preventDefault(); //STOP default action
+                    });
+            }); 
+        </script> 
+    </head>
+    <body>
+
+        <div id="signup">
+            <img src="images/snarlylogo.png" alt="snarly" width="172" />
+            <p>
+                A very chill skate spot app. Coming soon.
+            </p>
+            <form action="https://docs.google.com/forms/d/1ropUa9uON6baAlGyIs_iGtAINRHfb2eyqb_ORbdWhvs/formResponse" method="POST" id="ss-form" target="_self">
+            <input type="email" name="entry.263248485" id="entry.263248485" placeholder="Enter email address" />
+            <button type="submit">Get notified</button>
+            </form>
+        </div>
+    </body>
+</html>
