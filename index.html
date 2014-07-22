@@ -9,33 +9,6 @@
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-     
-        <script> 
-            // wait for the DOM to be loaded 
-            $(document).ready(function() { 
-                $("#ss-form").submit(function(e) {
-                        var postData = $(this).serializeArray();
-                        var formURL = $(this).attr("action");
-                        $.ajax(
-                        {
-                            url : formURL,
-                            type: "POST",
-                            data : postData,
-                            success:function(data, textStatus, jqXHR) 
-                            {
-                                alert('tight.');
-                            },
-                            error: function(jqXHR, textStatus, errorThrown) 
-                            {
-                                alert('not tight.');    
-                            }
-                        });
-                        e.preventDefault(); //STOP default action
-                    });
-            }); 
-        </script> 
     </head>
     <body>
 
