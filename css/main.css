@@ -117,6 +117,7 @@ button {
     border: 1px solid #F13846;
     color: #F13846;
     background: white;
+    line-height: 47px;
 }
 
 button:hover {
@@ -127,13 +128,7 @@ button:hover {
 button:active {
     position: relative;
     top: 1px;
-    line-height: 47px;
 }
-
-
-
-
-
 
 
 
