@@ -151,6 +151,22 @@ button:active {
 .logo {
     width: 116px;
     margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+.text-1 {
+    width: 189px;
+    height: auto;
+    margin-bottom: 0px;
+}
+
+.appstore {
+    width: 136px;
+    margin-bottom: 100px;
+}
+
+.text-2 {
+    width: 167px;
 }
 
 video {
