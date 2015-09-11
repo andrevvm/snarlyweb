@@ -162,7 +162,7 @@ button:active {
 
 .appstore {
     width: 136px;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
 }
 
 .text-2 {
@@ -185,7 +185,10 @@ video {
 
     #signup {
         float: left;
+    }
 
+    .appstore {
+        margin-bottom: 100px;
     }
 
 }
