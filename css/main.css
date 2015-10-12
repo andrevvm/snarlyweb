@@ -271,6 +271,18 @@ video {
     *zoom: 1;
 }
 
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.container p {
+    text-align: left;
+}
+
 /* ==========================================================================
    Print styles
    ========================================================================== */
