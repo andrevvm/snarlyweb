@@ -102,6 +102,16 @@ p {
     margin-top: 5px;
 }
 
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.share-btn {
+    display: block;
+    width: 136px;
+    margin: 10px auto;
+}
 
 input,
 button {
@@ -175,6 +185,7 @@ video {
     top: 72px;
     width: 273px;
     height: 486px;
+    background: black;
 }
 
 @media only screen and (min-device-width: 1024px) {
@@ -273,6 +284,7 @@ video {
 
 .container {
     width: 80%;
+    min-width: 300px;
     max-width: 1000px;
     margin: auto;
     padding: 0 20px;
