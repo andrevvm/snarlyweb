@@ -13,9 +13,10 @@
       <p>
         {{ spot.get('notes') }}
       </p>
-
-      <a :href="spotLocation" target="_blank">Open map</a>
-
+      
+      <p>
+        <a :href="spotLocation" target="_blank">Open map</a>
+      </p>
       <a href="https://itunes.apple.com/us/app/snarly/id1009352476?ls=1&mt=8" class="appstore">
           <img src="../assets/images/appstore.png" width="136" />
       </a>

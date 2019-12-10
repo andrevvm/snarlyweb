@@ -45,6 +45,6 @@ export default {
 <style lang="scss">
 @import '../styles/main.css';
 section {
-  height: 100%;
+  height: auto;
 }
 </style>
