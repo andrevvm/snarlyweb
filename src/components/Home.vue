@@ -44,7 +44,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 @import '../styles/main.css';
-section {
-  height: auto;
-}
+</style>
+<style scoped lang="scss">
+  section {
+    height: 100%;
+  }
 </style>
