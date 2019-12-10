@@ -3,6 +3,12 @@
   <section v-if="loaded">
     <div class="spot" v-if="spot">
 
+      <meta property="og:title" :content="'snarly'" />
+      <meta property="og:description" :content="spot.get('title')" />
+      <meta property="og:image" :content="spotPhoto" />
+      <meta property="og:image:width" content="400"/>
+      <meta property="og:image:height" content="400"/>
+
       <h1>{{ spot.get('title') }}</h1>
       <h2>{{ spot.get('loc_disp') }}</h2>
       
