@@ -96,7 +96,7 @@ export default {
     meta: function () {
       return [
         { property: 'og:title', content: this.title },
-        { property: 'og:title', content: this.title },
+        { property: 'og:description', content: this.spot.notes },
         { property: 'og:image', content: this.spotPhoto }
       ]
     }
@@ -133,8 +133,10 @@ export default {
       this.spot.photo = spot.get("photo");
       this.spot.location = spot.get("location");
       this.spot.locDisp = spot.get("loc_disp");
+      this.spot.notes = spot.get("notes");
 
       this.$emit('updateHead')
+      this.$nextTick(window.prerenderReady)
     }
   },
   mounted() {
