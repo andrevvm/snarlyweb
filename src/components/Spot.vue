@@ -17,9 +17,12 @@
       <p>
         <a :href="spotLocation" target="_blank">Open map</a>
       </p>
-      <a href="https://itunes.apple.com/us/app/snarly/id1009352476?ls=1&mt=8" class="appstore">
-          <img src="../assets/images/appstore.png" width="136" />
-      </a>
+      <p>
+        <a href="https://itunes.apple.com/us/app/snarly/id1009352476?ls=1&mt=8" class="appstore">
+            <img src="../assets/images/appstore.png" width="136" />
+        </a><br/>
+        <small>snarly is an app for skaters</small>
+      </p>
 
     </div>
     <div v-else>
@@ -53,13 +56,19 @@
 
   .spot-photo img {
     height: 50vh;
-    object-fit: contain;
+    width: 50vh;
+    object-fit: cover;
     background: #fff;
   }
 
   .appstore {
     margin-top: 20px;
     width: 100%;
+  }
+
+  small {
+    font-size: 12px;
+    color: #666;
   }
 </style>
 
@@ -75,9 +84,9 @@ export default {
   name: 'Spot',
   data () {
     return {
-      title: 'Spot',
+      title: null,
       spot: {
-        title: 'Spot',
+        title: null,
         locDisp: null,
         photo: null,
         notes: null,

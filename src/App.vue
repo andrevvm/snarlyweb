@@ -24,8 +24,9 @@ body {
 }
 
 header {
-  background: white;
-  padding: 40px 40px 20px;
+  background: $red;
+  padding: 10px 40px 10px;
+  margin-bottom: 40px;
 
   img {
     width: 40px;
