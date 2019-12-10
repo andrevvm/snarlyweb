@@ -84,7 +84,7 @@ export default {
   name: 'Spot',
   data () {
     return {
-      title: null,
+      title: 'Spot',
       spot: {
         title: null,
         locDisp: null,
