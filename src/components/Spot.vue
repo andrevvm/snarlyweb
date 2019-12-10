@@ -3,21 +3,15 @@
   <section v-if="loaded">
     <div class="spot" v-if="spot">
 
-      <meta property="og:title" :content="'snarly'" />
-      <meta property="og:description" :content="spot.get('title')" />
-      <meta property="og:image" :content="spotPhoto" />
-      <meta property="og:image:width" content="400"/>
-      <meta property="og:image:height" content="400"/>
-
-      <h1>{{ spot.get('title') }}</h1>
-      <h2>{{ spot.get('loc_disp') }}</h2>
+      <h1>{{ spot.title }}</h1>
+      <h2>{{ spot.locDisp }}</h2>
       
       <div class="spot-photo">
         <img :src="spotPhoto" />
       </div>
 
       <p>
-        {{ spot.get('notes') }}
+        {{ spot.notes }}
       </p>
       
       <p>
@@ -81,20 +75,46 @@ export default {
   name: 'Spot',
   data () {
     return {
-      spot: null,
+      title: 'Spot',
+      spot: {
+        title: 'Spot',
+        locDisp: null,
+        photo: null,
+        notes: null,
+        location: null
+      },
       loaded: false
     }
   },
+  head: {
+    // To use "this" in the component, it is necessary to return the object through a function
+    title: function () {
+      return {
+        inner: this.title
+      }
+    },
+    meta: function () {
+      return [
+        { property: 'og:title', content: this.title },
+        { property: 'og:title', content: this.title },
+        { property: 'og:image', content: this.spotPhoto }
+      ]
+    }
+  },
   computed: {
+    spotTitle() {
+      return this.spot.title
+    },
     spotPhoto() {
-      let photo = this.spot.get('photo');
-
+      let photo = this.spot.photo
+      if(!photo)
+        return false
       let cloudinary = 'https://res.cloudinary.com/snarly/image/fetch/w_'+ 750 +',h_'+ 870 +',c_fit,f_auto/' + photo._url
 
       return cloudinary;
     },
     spotLocation() {
-      let location = this.spot.get('location');
+      let location = this.spot.location
       if(isMobile.isIOS) {
         return 'maps://?q='+location._latitude+','+location._longitude;
       } else if (isMobile.isAndroid) {
@@ -102,6 +122,19 @@ export default {
       } else {
         return 'https://www.google.com/maps/search/?api=1&query='+location._latitude+','+location._longitude;
       }
+    }
+  },
+  methods: {
+    getAsyncData: function () {
+      this.$emit('updateHead')
+    },
+    setupSpot(spot) {
+      this.spot.title = spot.get("title");
+      this.spot.photo = spot.get("photo");
+      this.spot.location = spot.get("location");
+      this.spot.locDisp = spot.get("loc_disp");
+
+      this.$emit('updateHead')
     }
   },
   mounted() {
@@ -113,6 +146,8 @@ export default {
       .then((spot) => {
         this.loaded = true;
         $vm.spot = spot
+        this.title = spot.get('title') + ' - ' + spot.get('loc_disp');
+        this.setupSpot(spot);
       }, (error) => {
         this.loaded = true;
         // The object was not retrieved successfully.

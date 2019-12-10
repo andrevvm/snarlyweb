@@ -13,6 +13,7 @@
     "mobile-device-detect": "^0.3.3",
     "parse": "^2.10.0",
     "vue": "^2.5.2",
+    "vue-head": "^2.1.2",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
