@@ -1,6 +1,6 @@
 {
     "applinks": {
-        "apps": [],
+        "apps": ["andrevv.SnarlySwift"],
         "details": [
             {
                 "appID": "andrevv.SnarlySwift",
