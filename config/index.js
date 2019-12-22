@@ -39,6 +39,7 @@ module.exports = {
   build: {
     // Template for index.html
     index: path.resolve(__dirname, '../dist/index.html'),
+    apple_site_association: path.resolve(__dirname, '../dist/apple-app-site-association.json'),
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
