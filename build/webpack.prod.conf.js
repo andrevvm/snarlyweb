@@ -76,7 +76,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     new HtmlWebpackPlugin({
       filename: config.build.apple_site_association,
-      template: 'apple-app-site-association.json',
+      template: 'apple-app-site-association',
       inject: false,
       minify: {
         // removeComments: true,
