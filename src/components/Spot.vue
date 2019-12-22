@@ -73,7 +73,6 @@
 </style>
 
 <script>
-
 import { isMobile } from 'mobile-device-detect';
 
 var Parse = require('parse');
