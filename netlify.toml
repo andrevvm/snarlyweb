@@ -1,7 +1,8 @@
 [[redirects]]
   from = "/apple-app-site-association"
   to = "/apple-app-site-association.json"
-  status = 301
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/*"
