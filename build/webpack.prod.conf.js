@@ -79,9 +79,9 @@ const webpackConfig = merge(baseWebpackConfig, {
       template: 'apple-app-site-association.json',
       inject: false,
       minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true
+        // removeComments: true,
+        // collapseWhitespace: true,
+        // removeAttributeQuotes: true
         // more options:
         // https://github.com/kangax/html-minifier#options-quick-reference
       },
