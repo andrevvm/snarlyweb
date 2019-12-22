@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/apple-app-site-association"
+  to = "/apple-app-site-association.json"
+  status = 200
+  
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
