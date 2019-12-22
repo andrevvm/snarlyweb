@@ -1,9 +1,9 @@
 {
     "applinks": {
-        "apps": ["andrevv.SnarlySwift"],
+        "apps": [],
         "details": [
             {
-                "appID": "andrevv.SnarlySwift",
+                "appID": "M3RAHM9W6R.andrevv.SnarlySwift",
                 "paths": [ "/*"]
             }
         ]
